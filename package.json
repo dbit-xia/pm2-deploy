@@ -1,6 +1,6 @@
 {
   "name": "runsa-pm2-deploy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Deployment system for PM2",
   "main": "deploy.js",
   "files": [
