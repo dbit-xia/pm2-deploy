@@ -38,7 +38,7 @@ function spawn(config, args, cb) {
     cmd = [cmd, cmdArgs].join(' ');
   }
 
-  var proc = child_process.spawn('sh', ['-c', cmd], { stdio: 'inherit' });
+  var proc = child_process.spawn('bash', ['-c', cmd], { stdio: 'inherit' });
   var error;
 
   proc.on('error', function (err) {
