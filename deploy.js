@@ -78,7 +78,7 @@ function deployForEnv(deployConfig, env, args, cb) {
 
   if (envConfig.ssh_options) {
     envConfig.ssh_options = castArray(envConfig.ssh_options).map(function (option) {
-      return format('-o %s', option);
+      return format('-o \'%s\'', option);
     }).join(' ');
   }
 
