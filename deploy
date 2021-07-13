@@ -119,7 +119,7 @@ ssh_command() {
 runRemote() {
   local shell="`ssh_command`"
   echo $shell "\"$@\"" >> $LOG
-  $shell $@
+  echo $shell $@ | sh
 }
 
 #

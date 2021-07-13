@@ -28,7 +28,7 @@ var schema = {
  * @param {DeployCallback} cb done callback
  */
 function spawn(config, args, cb) {
-  var cmd = format('echo \'%j\' | "%s"', config, require.resolve('./deploy'));
+  var cmd = format('echo $\'%s\' | "%s"', JSON.stringify(config).replace(/'/g,'\\\''), require.resolve('./deploy'));
 
   args = args || [];
   if (args.length > 0) {
